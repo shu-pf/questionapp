@@ -1,0 +1,19 @@
+h1 問題一覧画面
+
+= link_to '新規登録', 'questions/new', class: 'btn btn-primary'
+
+.mb-3
+table.table.table-hover
+  thead.thead-default
+    tr
+      th= Question.human_attribute_name(:title)
+      th= Question.human_attribute_name(:question)
+      th
+  tbody
+    - @questions.each do |question|
+      tr
+        td= link_to question.title, question_path(question)
+        td= question.question
+        td
+          = link_to '編集', edit_question_path(question), class: 'btn btn-primary mr-3'
+          = link_to '削除', question, method: :delete, data: { confirm: "問題「#{question.title}」を削除します。宜しいですか？"}, class: 'btn btn-danger'

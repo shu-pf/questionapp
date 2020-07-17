@@ -1,0 +1,33 @@
+h1 回答画面
+
+table.table.table-hover
+  tbody
+    tr
+      th= Question.human_attribute_name(:title)
+      td= @question.title
+      td
+    tr
+      th= Question.human_attribute_name(:question)
+      td= simple_format(h(@question.question), {}, sanitize: false, weapper_tag: "div")
+      td
+
+h2 回答
+- if @question.anser=="A"
+  td= link_to @question.A, anser_path, class: 'btn btn-primary mr-3', method: :post
+- else
+  td= link_to @question.A, anser_path, class: 'btn btn-primary mr-3', method: :delete
+
+- if @question.anser=="B"
+  td= link_to @question.B, anser_path, class: 'btn btn-primary mr-3', method: :post
+- else
+  td= link_to @question.B, anser_path, class: 'btn btn-primary mr-3', method: :delete
+
+- if @question.anser=="C"
+  td= link_to @question.C, anser_path, class: 'btn btn-primary mr-3', method: :post
+- else
+  td= link_to @question.C, anser_path, class: 'btn btn-primary mr-3', method: :delete
+
+- if @question.anser=="D"
+  td= link_to @question.D, anser_path, class: 'btn btn-primary mr-3', method: :post
+- else
+  td= link_to @question.D, anser_path, class: 'btn btn-primary mr-3', method: :delete

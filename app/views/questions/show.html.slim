@@ -1,0 +1,30 @@
+h1 問題詳細
+
+.nav.justify-content-end
+  = link_to '一覧へ', questions_path, class: 'nav-link'
+table.table.table-hover
+  tbody
+    tr
+      th= Question.human_attribute_name(:title)
+      td= @question.title
+    tr
+      th= Question.human_attribute_name(:question)
+      td= simple_format(h(@question.question), {}, sanitize: false, weapper_tag: "div")
+    tr
+      th= Question.human_attribute_name(:A)
+      td= @question.A
+    tr
+      th= Question.human_attribute_name(:B)
+      td= @question.B
+    tr
+      th= Question.human_attribute_name(:C)
+      td= @question.C
+    tr
+      th= Question.human_attribute_name(:D)
+      td= @question.D
+    tr
+      th= Question.human_attribute_name(:anser)
+      td= @question.anser
+
+= link_to '編集', edit_question_path, class: 'btn btn-primary mr-3'
+= link_to '削除', @question, method: :delete, data: { confirm: "問題「#{@question.title}」を削除します。宜しいですか？"}, class: 'btn btn-danger'

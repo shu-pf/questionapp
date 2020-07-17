@@ -1,0 +1,23 @@
+= form_with model: question, local: true do |f|
+  .form-group
+    = f.label :title
+    = f.text_field :title, class: 'form-control', id: 'question_title'
+  .form-group
+    = f.label :question
+    = f.text_area :question, rows: 5, class: 'form-control', id: 'question_question'
+  .form-group
+    = f.label :A
+    = f.text_field :A, class: 'form-control', id: 'question_a'
+  .form-group
+    = f.label :B
+    = f.text_field :B, class: 'form-control', id: 'question_b'
+  .form-group
+    = f.label :C
+    = f.text_field :C, class: 'form-control', id: 'question_c'
+  .form-group
+    = f.label :D
+    = f.text_field :D, class: 'form-control', id: 'question_d'
+  .form-group
+    = f.label :anser
+    = f.text_field :anser, class: 'form-control', id: 'question_anser'
+  =f.submit nil, class: 'btn btn-primary'

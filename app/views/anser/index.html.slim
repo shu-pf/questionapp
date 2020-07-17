@@ -1,0 +1,14 @@
+h1 過去問
+
+.mb-3
+table.table.table-hover
+  thead.thead-default
+    tr
+      th= Question.human_attribute_name(:title)
+      th= Question.human_attribute_name(:question)
+      th
+  tbody
+    - @questions.each do |question|
+      tr
+        td= link_to question.title, anser_path + "/" + question.id.to_s
+        td= question.question
