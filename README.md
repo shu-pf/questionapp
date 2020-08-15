@@ -1,25 +1,14 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # questionapp
+## アプリの概要
+学校の課題用に開発した。
+簡単なクイズサイトです。
+問題を登録し、回答させることが出来ます。
+## アプリの機能
+- 管理者ユーザーが問題と回答を登録
+- 一般ユーザーが問題を回答
+- 回答の正誤表示
+- 今までの正誤一覧を表示
+## 工夫した点
+学校の自由課題で教育と言う分野が与えられたのでこれを作りました。
+間違った問題一覧を表示することで、アプリを使った後の復習が簡単に済むようにしました。
